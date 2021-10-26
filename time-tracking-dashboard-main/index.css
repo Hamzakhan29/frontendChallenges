@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+html,  body{
+    margin:0;
+    padding:0;
+    height: 100%;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(https://fonts.google.com/specimen/Rubik);
+  }
+
+.wholeBg{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    grid-gap: 3px;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.container{
+    background-color: hsl(226, 43%, 10%);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap:1em
+}
+
+.profile-card{
+    border: 1px solid transparent;
+    border-radius:4%;
+    background-color: hsl(235, 46%, 20%);
+    max-width: 210px;
+
+}
+.profilePicName{
+    background-color:hsl(235, 45%, 61%);
+    padding: 22px;
+    border-radius:4%;
+
+
+}
+
+.profile-card .profilePicName .img{
+    border:1px solid ghostwhite;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+
+  
+}
+.profile-circle{
+    width:60px;
+    height: 60px;
+}
+
+.profileName .name{
+    font-family: rubik;
+    font-size: 28px;
+    font-weight:normal;
+font-style:normal;
+display: block;
+}
+.links{
+    display: inline-block;
+    padding: 1em;
+}
+a.link {
+    transition: 0.4s ease-in;
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+    width: fit-content;
+}
+
+a.link:hover , a.link:focus{
+    color: ghostwhite;
+}
+
+.activities{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap:1em;
+    position: relative;
+}
+
+.activities .activity{
+    background-color: hsl(235, 46%, 20%);
+    border-radius:4%;
+    padding: 10px;
+    margin-top: -10px;
+    
+}
+
+.activities > div {
+    /* transition: 0.4s ease-out; */
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 4%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.activity-content:hover .activity {
+    /* transition: 0.4s ease-out; */
+    background-color:hsl(235, 52%, 52%);
+
+}
+.activity-content:hover {
+    background-color:hsl(235, 52%, 52%);
+
+}
+
+.contentImg{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+}
+
+.img-work{
+    background-color: hsl(15, 100%, 70%);
+}
+.img-play{
+    background-color: hsl(195, 74%, 62%);
+}
+.img-study{
+    background-color:hsl(348, 100%, 68%);
+}
+.img-exercise{
+    background-color: hsl(145, 58%, 55%);
+}
+.img-social{
+    background-color: hsl(264, 64%, 52%);
+}
+.img-selfcare{
+    background-color: hsl(43, 84%, 65%);
+}
+.content-head{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+
+}
+
+.content-title{
+    font-size: 18px;
+    color: ghostwhite;
+}
+
+.current{
+    color:ghostwhite;
+    font-size: 38px;
+    font-family: 'Rubik';
+    display: block;
+    width: fit-content;
+}
+.current::after{
+    content: "hrs";
+    color:ghostwhite;
+    font-size: 38px;
+    font-family: 'Rubik';
+}
+.previous{
+    color:hsl(235, 45%, 61%);
+    text-transform: capitalize;
+}
+.previous::after{
+    content: "hrs";
+    color:hsl(235, 45%, 61%);
+    text-transform: capitalize;
+}
+.profileName{
+    color: ghostwhite;
+    padding: 0 0 15px 0;
+    position: relative;
+}
+
+.svgIcons{
+    height: 26px;
+}
+
+.threeDots:hover svg  .dots path {
+    fill: white;
+  }
+
+
+/* responsive */
+@media only screen and (max-width: 375px) {
+    .current{
+        font-size: 28px;
+    }
+    .activities{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        top: 1em;
+    }
+    .reportHours{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .profilePicName{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .profile-card{
+        max-width: 100%;
+    }
+
+    .profileName{
+        left: 15px;
+    }
+
+    .profileName .name{
+        font-size: 22px;
+    }
+
+    .container{
+        padding: 80px 0;
+        grid-template-columns: 1fr;
+    }
+    .links{
+        display: flex;
+        justify-content: space-between;
+    }
+    .current::after{
+        font-size: 28px;
+    }
+
+    .wholeBg{
+        display: block;
+        padding: 0 10%;
+    }
+
+    .content-title{
+        font-size: 14px;
+    }
+}
+/* .activity::before {
+    content: "<p><img src='./images/icon-play.jpg' /></p>";
+    width: 100px;
+    height: 50px;
+    background-color: red;
+} */
