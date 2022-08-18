@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'manrope';
+    src: url('https://fonts.google.com/specimen/Manrope');
+}
+
+html, body{
+    margin:0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#main-container{
+    background-color: hsl(218, 23%, 16%);
+    height: 100%;
+    display: flex;
+}
+
+#section-container{
+    background-color:hsl(217, 19%, 24%) ;
+    margin: auto;
+    height: 40%;
+    width: 45%;
+    text-align: center;
+    padding: 12px;
+    position: relative;
+}
+
+#section-container h4{
+    color: aquamarine;
+    font-size:0.8em;
+    letter-spacing:0.3em;
+}
+
+.container-footer{
+    position: absolute;
+    bottom:-1.5em;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+}
+
+#random{
+    background-color: aquamarine;
+    padding:1.2em;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: 0 0 20px 3px aquamarine;
+    position: relative;
+}
+
+.seperator{
+    background-image: url('./images/pattern-divider-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    height: 1em;
+    margin: 5% 5%;
+    position:relative;
+    bottom: 50%;
+}
+
+#random img{
+    display: flex;
+    padding: 0;
+    margin:0;
+    align-self: center;
+    z-index: 999;
+}
+
+.thin-line{
+    width: 90%;
+    border-color: hsl(217deg 13% 38%);
+}
+
+button#random.anime::before {
+    content: '';
+    position: absolute;
+    z-index: 9999;
+    width: 20px;
+    border:1px solid transparent;
+    border-radius:50%;
+        height: 20px;
+        left: 17px;
+    background-color: aquamarine;
+    animation: rotateExpand 1s ease-in;
+    animation-direction: normal;
+    opacity: 0;
+    z-index: 99;
+}
+
+@keyframes rotateExpand {
+    0%{
+        transform: scale(1,1);
+    }
+    10%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(5,5);
+    }
+}
+
+
+
+.quote{
+    font-size: 1.7em;
+    color: #e8f2f3;
+    font-family: 'manrope',sans-serif;
+    font-weight: bold;
+
+}
+
+.quote::before{
+    content:'\201C';
+    color: #e8f2f3;
+}
+
+.quote::after{
+    content:'\201D';
+    color: #e8f2f3;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #section-container{
+        width: 80%;
+        height: 45%;
+    }
+
+    .quote{
+        font-size: 2em!important;
+    }
+}
+
